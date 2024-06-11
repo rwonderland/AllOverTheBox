@@ -20,6 +20,7 @@ a, .btn-link {
     padding-top: 1.1rem;
 }
 
+
 h1:focus {
     outline: none;
 }
@@ -51,19 +52,112 @@ h1:focus {
 }
 
 
-.transformed:hover {
-    transform: rotate(360deg);
-    transition: transform 2s;
-    position: relative;
-    animation: logo forwards;
-    animation-duration: 6s;
+.cubo {
+    --clr-1: #5C2FC2;
+    --clr-2: #5C2FC2;
+    --clr-3: #5C2FC2;
+    --clr-4: #5C2FC2;
+    --clr-5: #5C2FC2;
+    --clr-6: #5C2FC2;
+    width: 100px;
+    height: 100px;
+    transform-style: preserve-3d;
+    animation: giratorio 4s infinite linear;
 }
-@keyframes logo {
-    from{
-        transform:translateX(opx);
-        
-    }to{
-         /* hay que poner media queries para movil/ tablet */
-         transform:translateX(70vw);
-     }
+
+.lado {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transform-style: preserve-3d;
+}
+
+    .lado:nth-child(1) {
+        border: 5px solid var(--clr-1);
+        transform: translateZ(-50px) rotateY(180deg);
+    }
+
+    .lado:nth-child(2) {
+        border: 5px solid var(--clr-2);
+        transform: rotateY(-270deg) translateX(50%);
+        transform-origin: top right;
+    }
+
+    .lado:nth-child(3) {
+        border: 5px solid var(--clr-3);
+        transform: rotateY(270deg) translateX(-50%);
+        transform-origin: center left;
+    }
+
+    .lado:nth-child(4) {
+        border: 5px solid var(--clr-4);
+        transform: rotateX(90deg) translateY(-50%);
+        transform-origin: top center;
+    }
+
+    .lado:nth-child(5) {
+        border: 5px solid var(--clr-5);
+        transform: rotateX(-90deg) translateY(50%);
+        transform-origin: bottom center;
+    }
+
+    .lado:nth-child(6) {
+        border: 5px solid var(--clr-6);
+        transform: translateZ(50px);
+    }
+
+@keyframes giratorio {
+    0% {
+        transform: rotateX(0deg) rotateY(0deg);
+    }
+
+    100% {
+        transform: rotateX(360deg) rotateY(360deg);
+    }
+}
+/*css de la tarjeta */
+.container-main {
+    
+    width: 224px;
+    height: 225px;
+    perspective: 800px;
+    
+}
+
+    .container-main:hover > .card {
+        cursor: pointer;
+        transform: rotateY(180deg);
+    }
+
+.card {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    transition: transform 1500ms;
+    transform-style: preserve-3d;
+}
+
+.front,
+.back {
+    height: 100%;
+    width: 100%;
+    border-radius:5px;
+    box-shadow: 0 0 5px 2px rgba(50, 50, 50, 0.25);
+    position: absolute;
+    backface-visibility: hidden;
+}
+
+.front {
+    background-image: url("img/caja-1.jpg");
+    
+}
+
+.back {
+    background-color: #5472d2;
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items:center;
+    gap: 5rem;
 }

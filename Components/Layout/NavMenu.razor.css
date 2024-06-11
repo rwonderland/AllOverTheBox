@@ -17,8 +17,9 @@
 
 .top-row {
     height: 3.5rem;
-    background-color: rgba(0,0,0,0.4);
+    background-color: #c62dfd;
 }
+/*rgba(0,0,0,0.4);*/
 
 .navbar-brand {
     font-size: 1.1rem;
