@@ -1,4 +1,5 @@
-﻿@inherits LayoutComponentBase
+﻿@using System.Globalization
+@inherits LayoutComponentBase
 
 <div class="page">
     <div class="sidebar ">
@@ -13,8 +14,16 @@
         <article class="content px-4">
             @Body
         </article>
+        <footer>
+            <h5 class="text-center text-white pt-5">Hand coding from A coruña with love <i class="fa-solid fa-heart"></i> @DateTime.Now.Year</h5>
+
+        </footer>
     </main>
 </div>
+
+
+
+
 
 
 
@@ -23,3 +32,5 @@
     <a href="" class="reload">Reload</a>
     <a class="dismiss">🗙</a>
 </div>
+
+}

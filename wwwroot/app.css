@@ -1,6 +1,15 @@
 html, body {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
+body {
+    background-image: linear-gradient(0deg,rgba(34,193,195,1)0%,rgba(198,45,253,1)100%);
+}
+/*footer {
+    background-image: linear-gradient(0deg,rgba(198,45,253,1) 0%, rgba(34,193,195,1)100%);  
+   
+    min-height: 10vh;
+    height: 20vh;
+}*/
 
 a, .btn-link {
     color: #006bb7;
@@ -53,12 +62,12 @@ h1:focus {
 
 
 .cubo {
-    --clr-1: #5C2FC2;
-    --clr-2: #5C2FC2;
-    --clr-3: #5C2FC2;
-    --clr-4: #5C2FC2;
-    --clr-5: #5C2FC2;
-    --clr-6: #5C2FC2;
+    --clr-1: #41C9E2;
+    --clr-2: #41C9E2;
+    --clr-3: #41C9E2;
+    --clr-4: #41C9E2;
+    --clr-5: #41C9E2;
+    --clr-6: #41C9E2;
     width: 100px;
     height: 100px;
     transform-style: preserve-3d;
