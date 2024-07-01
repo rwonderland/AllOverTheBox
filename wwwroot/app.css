@@ -2,14 +2,10 @@ html, body {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 body {
-    background-image: linear-gradient(0deg,rgba(34,193,195,1)0%,rgba(198,45,253,1)100%);
+    background-color: #FFF9D0;
 }
-/*footer {
-    background-image: linear-gradient(0deg,rgba(198,45,253,1) 0%, rgba(34,193,195,1)100%);  
-   
-    min-height: 10vh;
-    height: 20vh;
-}*/
+
+
 
 a, .btn-link {
     color: #006bb7;
@@ -72,6 +68,7 @@ h1:focus {
     height: 100px;
     transform-style: preserve-3d;
     animation: giratorio 4s infinite linear;
+    color: blueviolet;
 }
 
 .lado {
@@ -127,8 +124,8 @@ h1:focus {
 /*css de la tarjeta */
 .container-main {
     
-    width: 224px;
-    height: 225px;
+    width: 35%;
+    height:50vh;
     perspective: 800px;
     
 }
@@ -136,12 +133,14 @@ h1:focus {
     .container-main:hover > .card {
         cursor: pointer;
         transform: rotateY(180deg);
+       
     }
 
 .card {
     height: 100%;
     width: 100%;
     position: relative;
+    left: 60%;
     transition: transform 1500ms;
     transform-style: preserve-3d;
 }
@@ -157,8 +156,13 @@ h1:focus {
 }
 
 .front {
-    background-image: url("img/caja-1.jpg");
-    
+    background-color: #5472d2;
+   
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
 }
 
 .back {
@@ -166,7 +170,16 @@ h1:focus {
     transform: rotateY(180deg);
     display: flex;
     flex-direction: column;
-    justify-content:center;
-    align-items:center;
+    justify-content: center;
+    align-items: center;
     gap: 5rem;
+}
+
+.proyecto-1 {
+    height: 20rem;
+    width: 90%;
+    background-color: white;
+    border-radius: 20px;
+    background-color: #C65BCF;
+    color: white;
 }
